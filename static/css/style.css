@@ -1,0 +1,42 @@
+body{
+    background-color: #fff8ed;
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+}
+
+
+h1{
+    font-family: Georgia, serif;
+    font-size: 60px;
+  
+}
+
+h3{
+font-family: Georgia, serif;
+}
+
+i{
+    width: 2em;
+    height: 2em;
+    color: #ffffff;
+    padding: 12px;
+
+}
+
+.myclass{
+    background-color: #5591eb;
+    text-align: center;
+    height: 700px;
+    color: #ffffff;
+}
+
+.login-card{
+    background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    

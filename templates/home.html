@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudySync</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- This Link Is for bootstrap icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Connect External Css -->
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+      >
+        <div class="col-md-3 mb-2 mb-md-0">
+          <a
+            href="/"
+            class="d-inline-flex link-body-emphasis text-decoration-none"
+          >
+            <svg
+              class="bi"
+              width="40"
+              height="32"
+              role="img"
+              aria-label="Bootstrap"
+            >
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+        </div>
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#home" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="#features" class="nav-link px-2">Features</a></li>
+          <li><a href="#faq" class="nav-link px-2">FAQs</a></li>
+          <li><a href="#about" class="nav-link px-2">About</a></li>
+        </ul>
+        <div class="col-md-3 text-end">
+          <a
+            href="{{ url_for('login') }}"
+            class="btn btn-outline-primary btn-custom"
+            >Get Started</a
+          >
+        </div>
+      </header>
+    </div>
+
+    <div class="container col-xxl-8 px-0 py-5" id="home">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="{{ url_for( 'static'  , filename = 'images/study.png') }}"
+            class="d-block mx-lg-auto img-fluid"
+            alt="study image"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+            Collaborate. Share. Learn.
+          </h1>
+          <p class="lead">
+            Upload, find, and download study notes from real students like you.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+              Start Sharing
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container px-5 py-5" id="features">
+      <h2 class="pb-2 border-bottom">Features</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+        <div class="feature col">
+          <div
+            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+          >
+            <i class="bi bi-upload"></i>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Upload Notes</h3>
+          <p>Share your study notes with the community. Help others learn</p>
+          <a href="#" class="icon-link"> Upload now </a>
+        </div>
+        <div class="feature col">
+          <div
+            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+          >
+            <i class="bi bi-search"></i>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Search by Subjects</h3>
+          <p>Quickly find notes by searching for subjects or keywords.</p>
+          <a href="#" class="icon-link">
+            Search now
+            <svg class="bi" aria-hidden="true">
+              <use xlink:href="#chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="feature col">
+          <div
+            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+          >
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">View Documents</h3>
+          <p>View your uploaded , liked and commented documents.</p>
+          <a href="#" class="icon-link">
+            View now
+            <svg class="bi" aria-hidden="true">
+              <use xlink:href="#chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="feature col">
+          <div
+            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+          >
+            <i class="bi bi-check-all"></i>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Never Miss a Deadline</h3>
+          <p>keep track of important deadlines using to-do lists</p>
+          <a href="#" class="icon-link"> Use To-Do List </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="px-5 pt-5 my-5 text-center border-bottom">
+      <h1 class="display-4 fw-bold text-body-emphasis">
+        Say Goodbye to Missed Deadlines and Scattered Notes
+      </h1>
+
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          Bring all your academic essentials together — assignments, study
+          plans, reminders, and more — in one beautifully designed dashboard.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
+            Primary button
+          </button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+            Secondary
+          </button>
+        </div>
+      </div>
+      <div class="overflow-hidden" style="max-height: 30vh">
+        <div class="container px-5">
+          <img
+            src="static/images/todo1.png"
+            class="img-fluid mb-4"
+            alt="Example image"
+            width="500"
+            height="700"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container col-xxl-8 px-0 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="static/images/calender.png"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+            Bring Your Calendar to Life with Smart Scheduling
+          </h1>
+          <p class="lead">
+            Seamlessly sync your events, deadlines, and daily plans in one
+            place. Let your calendar do more than just tell date — let it help
+            you manage it with ease.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+              Access Calender
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container col-xxl-8 px-0 py-5">
+      <div class="row align-items-center g-5 py-5">
+        <div class="col-md-9 order-md-2">
+          <h3 class="fs-2 text-body-emphasis">
+            "This project has completely transformed how I organize tasks, track
+            deadlines, and manage my daily goals. It's like having a digital
+            assistant that never lets you miss a thing. The simplicity and
+            effectiveness make it an essential part of my routine."
+          </h3>
+          <p>— Ayushi Soni</p>
+        </div>
+        <div class="col-md-3 order-md-1">
+          <img
+            src="static/images/ayushi1.png"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Ayushi's image"
+            width="250"
+            height="250"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="myclass">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+        "Capture Ideas. Review Anytime."
+      </h1>
+    </div>
+
+    <div class="container col-xxl-8 px-0 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="static/images/calender.png"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+            Collaborate Smarter : Share notes instantly, wherever you are.
+          </h1>
+          <p class="lead">
+            Whether you're preparing for an exam, working on a group project, or
+            simply collecting ideas — your notes stay organized, accessible, and
+            easy to share with friends, classmates, or teammates.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+              Upload Notes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container px-4 py-5" id="about">
+      <h2 class="pb-2 border-bottom">About Us</h2>
+      <p class="lead">We are a community-driven platform dedicated to helping students share and access study materials. 
+        Our mission is to make learning more accessible and collaborative.</p>
+      <p>Join us in building a better learning environment for everyone!</p>
+
+
+    <div class="container px-4 py-5" id="faq">
+      <h2 class="pb-2 border-bottom">FAQs</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+        <div class="col">
+          <h3>How do I upload notes?</h3>
+          <p>Click on the upload button and follow the instructions to share your notes.</p>
+        </div>
+        <div class="col">
+          <h3>Can I search for specific subjects?</h3>
+          <p>Yes, use the search bar to find notes by subject or keywords.</p>
+        </div>
+        <div class="col">
+          <h3>Is there a way to like or comment on notes?</h3>
+          <p>Absolutely! You can like and comment on any note shared by users.</p>
+        </div>
+        <div class="col">
+          <h3>How can I contact support?</h3>
+          <p>If you have any issues, please reach out to our support team via the contact page.</p>
+        </div>
+      </div>
+    
+  -->
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-body-secondary">Security</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-body-secondary">Legal</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-body-secondary">Privacy</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
